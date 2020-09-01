@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import workshop.sc.Response;
 
-@FeignClient(name = "ACTIVITY-SERVICE")
+@FeignClient(name = "ACTIVITY-SERVICE", fallback = ActivityFallback.class)
 @RibbonClient(name = "ACTIVITY-SERVICE")
 public interface ActivityClient {
     @GetMapping("/activity")
