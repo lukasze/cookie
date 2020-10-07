@@ -136,8 +136,8 @@ lombok
 	
 ### 3. Przeglądarka - powinniśmy dostać się do 2 instancji:
 
-	http://eureka-server:8761
-	http://eureka-server:8762
+	http://eureka-peer1:8761
+	http://eureka-peer1:8762
 	
 	
 #  IV Activity Service 
