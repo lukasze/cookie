@@ -99,6 +99,12 @@ lombok
 	 spring-cloud-starter-config (initalizr: Config Client)
 	 spring-cloud-starter-netflix-eureka-server (initalizr: Eureka Server)
 
+### Uwaga, w nowszych wersjach spriong cloud (od 2020.0.1), potrzebujemy dla klientów serwera konfiguracyjnego dodać jeszcze jedną zależność:
+	https://stackoverflow.com/questions/65430810/config-client-is-not-working-in-spring-boot 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
 
 ## II Aktywuj eurekę - dodaj do klasy głównej adnotację @EnableEurekaServer
 	Nie potrzeba adnotacji dla klienta serwera konfiguracyjnego - wystarczy zależność i wskazanie (w pliku bootstrap.yml), gdzie znajduje się serwer - jeśli nie wskażemy, domyślnie: localhost:8888.
